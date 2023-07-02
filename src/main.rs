@@ -6,6 +6,15 @@ fn main()
 {
     let cli_args: Vec<String> = std::env::args().collect();
 
+    if cli_args.len() < 2
+    {
+        println!( "At least one argument must be passed!" );
+        println!();
+        println!( "Usage: fprop <path_to_file1> <path_to_file2> <path_to_file3> ..." );
+
+        return;
+    }
+
     println!();
 
     for arg_idx in 1..cli_args.len()
